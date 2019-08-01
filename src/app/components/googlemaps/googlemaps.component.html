@@ -1,0 +1,22 @@
+<main class="container mt-5">
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action active">Active item</button>
+                <button type="button" class="list-group-item list-group-item-action">Item</button>
+                <button type="button" class="list-group-item list-group-item-action disabled">Disabled item</button>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-marker [latitude]="miPosicion.lat"
+                            [longitude]="miPosicion.lng"
+                            *ngIf="miPosicion"
+                            (markerClick)="click()"></agm-marker>
+            </agm-map>
+
+        </div>
+    </div>
+
+</main>
